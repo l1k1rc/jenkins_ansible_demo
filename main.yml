@@ -1,0 +1,10 @@
+---
+- name: "PLAY: Ansible automation"
+  hosts: "{{ hosts | default('all') }}"
+  connection: local #network_cli
+  gather_facts: no
+  tasks:
+   - name: "TASK 1: test"
+     debug:
+       msg: "Test ansible jenkins automation"
+     delegate_to: localhost
